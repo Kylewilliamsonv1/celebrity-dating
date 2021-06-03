@@ -10,17 +10,20 @@ $(document).ready(){
   }
 });
 
-$(document).ready(){
+$(document).ready(function(){
+  $(#bio).submit(function(event) { 
+    event.preventDefault();
     if (personality===outgoing)
-    $(pairingA).show();
-  } else if (personality===reserved)
-    $(pairingB).show();
-  } else if (personality===funny)
-    $(pairingC).show();
-  } else if (personality===woodsy)
-    $(pairingD).show();
-  } else {
-    alert('please enter your age')
-  }  
+      $(pairingA).show();
+    } else if (personality===reserved)
+      $(pairingB).show();
+    } else if (personality===funny)
+      $(pairingC).show();
+    } else if (personality===woodsy)
+      $(pairingD).show();
+    } else {
+      alert('please enter your age');
+    } 
+  });  
 });
 
